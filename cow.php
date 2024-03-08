@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>cow.php</title>
+    <title>cow</title>
 </head>
 <body>
 <?php
