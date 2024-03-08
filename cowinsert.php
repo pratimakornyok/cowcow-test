@@ -26,7 +26,7 @@
     mysqli_query($conn,"set character_set_results=utf8mb4");
   
     $sql = "insert into cow(lot_num, AmountOfMilk, Quality, Price) values ('$lot_num', '$AmountOfMilk', '$Quality', '$Price')";
-    mysqli_query($conn, $sql) or die("insert ลงตาราง cow มีข้อผิดพลาดเกิดขึ้น" .mysqli_error());
+    mysqli_query($conn, $sql) or die("insert ลงตาราง cow มีข้อผิดพลาดเกิดขึ้น");
     echo '<br><br><h2>บันทึกข้อมูลวัว '.$lot_num.' เรียบร้อย</h2>';
     echo '<br><br><a href="insertcow.php">กลับหน้า bookList1.php</a>';
     mysqli_close($conn);
