@@ -9,7 +9,12 @@
     <header>
         <h1> Log in </h1>
     </header>
-
+    <td>
+        <tr>
+            user
+            <input type="text">
+        </tr>
+    </td>
     <div class="header">
         <h2>login</h2>
     </div>
