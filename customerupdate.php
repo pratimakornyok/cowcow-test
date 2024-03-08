@@ -26,10 +26,11 @@
     mysqli_query($conn,"set character_set_client=utf8mb4");
     mysqli_query($conn,"set character_set_results=utf8mb4");
   
-    $sql = "insert into customer(customer_id, customer_name, customer_address, customer_phone, customer_type) values ('$customer_id', '$customer_name', '$customer_address', '$customer_phone','$customer_type')";
-    mysqli_query($conn, $sql) or die("insert ลงตาราง cow มีข้อผิดพลาดเกิดขึ้น");
+    $sql = "UPDATE customer SET customer_name='$customer_name', customer_address='$customer_address', customer_phone='$customer_phone',customer_type='$customer_type' WHERE customer_id='$customer_id'";
+    mysqli_query($conn, $sql) or die("อัปเดตข้อมูลในตาราง cow มีข้อผิดพลาดเกิดขึ้น");
+
     header("location: customer.php");
-    echo '<br><br><a href="insertcustomer.php">กลับหน้า bookList1.php</a>';
+    echo '<br><br><a href="customer.php">กลับหน้า bookList1.php</a>';
     mysqli_close($conn);
     echo '</center>';
 ?>

@@ -1,5 +1,5 @@
 <?php
-$lot_num = $_REQUEST['lot_num'];
+$employee_id = $_REQUEST['employee_id'];
 $hostname = "localhost";
 $username = "root";
 $password = "";
@@ -11,7 +11,7 @@ if (!$conn) {
     die("ไม่สามารถติดต่อกับ MySQL ได้: " . mysqli_connect_error());
 }
 
-$sql = "DELETE FROM cow WHERE lot_num = '$lot_num'";
+$sql = "DELETE FROM employee WHERE employee_id = '$employee_id'";
 $result = mysqli_query($conn, $sql);
 
 if (!$result) {
@@ -20,5 +20,5 @@ if (!$result) {
 
 mysqli_close($conn);
 
-header("Location: cow.php");
+header("Location: employee.php");
 ?>

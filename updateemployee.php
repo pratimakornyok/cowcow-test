@@ -19,10 +19,10 @@
 
     mysqli_set_charset($conn, "utf8mb4");
 
-    if(isset($_GET['lot_num'])) {
-        $lot_num = $_GET['lot_num'];
+    if(isset($_GET['employee_id'])) {
+        $employee_id = $_GET['employee_id'];
 
-        $sql = "SELECT * FROM cow WHERE lot_num='$lot_num'";
+        $sql = "SELECT * FROM employee WHERE employee_id='$employee_id'";
         $result = mysqli_query($conn, $sql);
 
         if (!$result) {
@@ -33,18 +33,18 @@
             $row_data = mysqli_fetch_assoc($result);
     ?>
             <center>
-                <h3>แก้ไขข้อมูลวัว</h3>
-                <form action="cowupdate.php" method="post">
-                    <input type="hidden" name="lot_num" value="<?php echo $row_data['lot_num']; ?>">
-                    <label for="AmountOfMilk">ปริมาณนม:</label>
-                    <input type="text" name="AmountOfMilk" value="<?php echo $row_data['AmountOfMilk']; ?>"><br><br>
-                    <label for="Quality">เกรด:</label>
-                    <input type="text" name="Quality" value="<?php echo $row_data['Quality']; ?>"><br><br>
-                    <label for="Price">ราคา:</label>
-                    <input type="text" name="Price" value="<?php echo $row_data['Price']; ?>"><br><br>
+                <h3>แก้ไขemployee</h3>
+                <form action="employeeupdate.php" method="post">
+                    <input type="hidden" name="employee_id" value="<?php echo $row_data['employee_id']; ?>">
+                    <label for="employee_name">ปริมาณนม:</label>
+                    <input type="text" name="employee_name" value="<?php echo $row_data['employee_name']; ?>"><br><br>
+                    <label for="employee_address">เกรด:</label>
+                    <input type="text" name="employee_address" value="<?php echo $row_data['employee_address']; ?>"><br><br>
+                    <label for="employee_phone">ราคา:</label>
+                    <input type="text" name="employee_phone" value="<?php echo $row_data['employee_phone']; ?>"><br><br>
                     <input type="submit" name="submit" value="บันทึกข้อมูล"style="cursor:hand;">
                 </form>
-                <br><br><a href="cow.php">กลับ</a>
+                <br><br><a href="employee.php">กลับ</a>
             </center>
     <?php
         } else {

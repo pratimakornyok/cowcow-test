@@ -7,11 +7,10 @@
 </head>
 <body>
 <?php
-    $customer_id = $_POST['customer_id'];
-    $customer_name = $_POST['customer_name'];
-    $customer_address = $_POST['customer_address'];
-    $customer_phone = $_POST['customer_phone'];
-    $customer_type = $_POST['customer_type'];
+    $employee_id = $_POST['employee_id'];
+    $employee_name = $_POST['employee_name'];
+    $employee_address = $_POST['employee_address'];
+    $employee_phone = $_POST['employee_phone'];
 
     $hostname = "localhost";
     $username = "root";
@@ -26,10 +25,10 @@
     mysqli_query($conn,"set character_set_client=utf8mb4");
     mysqli_query($conn,"set character_set_results=utf8mb4");
   
-    $sql = "insert into customer(customer_id, customer_name, customer_address, customer_phone, customer_type) values ('$customer_id', '$customer_name', '$customer_address', '$customer_phone','$customer_type')";
+    $sql = "insert into employee(employee_id, employee_name, employee_address, employee_phone) values ('$employee_id', '$employee_name', '$employee_address', '$employee_phone')";
     mysqli_query($conn, $sql) or die("insert ลงตาราง cow มีข้อผิดพลาดเกิดขึ้น");
-    header("location: customer.php");
-    echo '<br><br><a href="insertcustomer.php">กลับหน้า bookList1.php</a>';
+    header("location: employee.php");
+    echo '<br><br><a href="insertemployee.php">กลับหน้า bookList1.php</a>';
     mysqli_close($conn);
     echo '</center>';
 ?>

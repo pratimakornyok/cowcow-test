@@ -25,11 +25,10 @@
     mysqli_query($conn,"set character_set_client=utf8mb4");
     mysqli_query($conn,"set character_set_results=utf8mb4");
   
-    // ใช้คำสั่ง UPDATE เพื่ออัปเดตข้อมูลในตาราง cow
     $sql = "UPDATE cow SET AmountOfMilk='$AmountOfMilk', Quality='$Quality', Price='$Price' WHERE lot_num='$lot_num'";
     mysqli_query($conn, $sql) or die("อัปเดตข้อมูลในตาราง cow มีข้อผิดพลาดเกิดขึ้น");
 
-    echo '<br><br><h2>บันทึกข้อมูลวัว '.$lot_num.' เรียบร้อย</h2>';
+    header("location: cow.php");
     echo '<br><br><a href="cow.php">กลับหน้า bookList1.php</a>';
     mysqli_close($conn);
     echo '</center>';

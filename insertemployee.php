@@ -52,31 +52,27 @@
         <center>
         <form enctype="multipart/form-data" name="save" method="post"
 
-        action="customerinsert.php">
+        action="employeeinsert.php">
 
         <br><br><table width="700" border="1" bgcolor="#ffffff">
         <tr>
             <th colspan="2" bgcolor="" height="21">เพิ่มรายการ</th>
         </tr>
         <tr>
-            <td width="200">รหัสลูกค้า : </td>
-            <td width="400"><input type="text" name="customer_id" size="10" maxlength="5"></td>
+            <td width="200">รหัสพนักงาน : </td>
+            <td width="400"><input type="text" name="employee_id" size="10" maxlength="5"></td>
         </tr>
         <tr>
             <td width="200">ชื่อ : </td>
-            <td width="400"><input type="text" name="customer_name" size="10" maxlength="5"></td>
+            <td width="400"><input type="text" name="employee_name" size="10" maxlength="5"></td>
         </tr>
         <tr>
             <td width="200">ที่อยู่ : </td>
-            <td width="400"><input type="text" name="customer_address" size="10" maxlength="5"></td>
+            <td width="400"><input type="text" name="employee_address" size="10" maxlength="5"></td>
         </tr>
         <tr>
             <td width="200">เบอร์โทร : </td>
-            <td width="400"><input type="text" name="customer_phone" size="10" maxlength="5"></td>
-        </tr>
-        <tr>
-            <td width="200">ประเภท : </td>
-            <td width="400"><input type="text" name="customer_type" size="10" maxlength="5"></td>
+            <td width="400"><input type="text" name="employee_phone" size="10" maxlength="5"></td>
         </tr>
         </table>
             <br><input type="submit" name="submit" value="บันทึกข้อมูล"style="cursor:hand;">

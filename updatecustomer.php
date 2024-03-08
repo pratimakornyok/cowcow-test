@@ -19,10 +19,10 @@
 
     mysqli_set_charset($conn, "utf8mb4");
 
-    if(isset($_GET['lot_num'])) {
-        $lot_num = $_GET['lot_num'];
+    if(isset($_GET['customer_id'])) {
+        $customer_id = $_GET['customer_id'];
 
-        $sql = "SELECT * FROM cow WHERE lot_num='$lot_num'";
+        $sql = "SELECT * FROM customer WHERE customer_id='$customer_id'";
         $result = mysqli_query($conn, $sql);
 
         if (!$result) {
@@ -33,18 +33,20 @@
             $row_data = mysqli_fetch_assoc($result);
     ?>
             <center>
-                <h3>แก้ไขข้อมูลวัว</h3>
-                <form action="cowupdate.php" method="post">
-                    <input type="hidden" name="lot_num" value="<?php echo $row_data['lot_num']; ?>">
-                    <label for="AmountOfMilk">ปริมาณนม:</label>
-                    <input type="text" name="AmountOfMilk" value="<?php echo $row_data['AmountOfMilk']; ?>"><br><br>
-                    <label for="Quality">เกรด:</label>
-                    <input type="text" name="Quality" value="<?php echo $row_data['Quality']; ?>"><br><br>
-                    <label for="Price">ราคา:</label>
-                    <input type="text" name="Price" value="<?php echo $row_data['Price']; ?>"><br><br>
+                <h3>แก้ไขcustomer</h3>
+                <form action="customerupdate.php" method="post">
+                    <input type="hidden" name="customer_id" value="<?php echo $row_data['customer_id']; ?>">
+                    <label for="customer_name">ปริมาณนม:</label>
+                    <input type="text" name="customer_name" value="<?php echo $row_data['customer_name']; ?>"><br><br>
+                    <label for="customer_address">เกรด:</label>
+                    <input type="text" name="customer_address" value="<?php echo $row_data['customer_address']; ?>"><br><br>
+                    <label for="customer_phone">ราคา:</label>
+                    <input type="text" name="customer_phone" value="<?php echo $row_data['customer_phone']; ?>"><br><br>
+                    <label for="customer_type">ประเภท:</label>
+                    <input type="text" name="customer_type" value="<?php echo $row_data['customer_type']; ?>"><br><br>
                     <input type="submit" name="submit" value="บันทึกข้อมูล"style="cursor:hand;">
                 </form>
-                <br><br><a href="cow.php">กลับ</a>
+                <br><br><a href="customer.php">กลับ</a>
             </center>
     <?php
         } else {

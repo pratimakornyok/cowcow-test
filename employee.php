@@ -15,7 +15,7 @@ if (!$conn) {
 
 mysqli_set_charset($conn, "utf8mb4");
 
-$sql = "SELECT * FROM customer";
+$sql = "SELECT * FROM employee";
 $result = mysqli_query($conn, $sql);
 
 if (!$result) {
@@ -23,29 +23,27 @@ if (!$result) {
 }
 
 echo '<center>';
-echo '<br><h3>ลูกค้า</h3>';
-echo '<a href="insertcustomer.php">เพิ่มลูกค้า</a>';
+echo '<br><h3>พนักงาน</h3>';
+echo '<a href="insertemployee.php">เพิ่มพนักงาน</a>';
 echo '<table width="500" border="1">';
 echo '<tr>';
 echo '<th width="50">ลำดับ</th>';
-echo '<th width="100">รหัสลูกค้า</th>';
-echo '<th width="100">ชื่อลูกค้า</th>';
+echo '<th width="100">รหัสพนักงาน</th>';
+echo '<th width="100">ชื่อพนักงาน</th>';
 echo '<th width="100">ที่อยู่</th>';
 echo '<th width="100">เบอร์โทร</th>';
-echo '<th width="80">ประเภท</th>';
 echo '</tr>';
 
 $row = 1;
 while ($row_data = mysqli_fetch_assoc($result)) {
     echo '<tr align="center">';
     echo '<td>'.$row.'</td>';
-    echo '<td>'.$row_data['customer_id'].'</td>';
-    echo '<td>'.$row_data['customer_name'].'</td>';
-    echo '<td>'.$row_data['customer_address'].'</td>';
-    echo '<td>'.$row_data['customer_phone'].'</td>';
-    echo '<td>'.$row_data['customer_type'].'</td>';
-    echo '<td><a href="updatecustomer.php?customer_id='.$row_data['customer_id'].'">แก้ไข</a></td>';
-    echo '<td><a href="customerdelete.php?customer_id='.$row_data['customer_id'].'" onclick="return confirm(\'ยืนยันการลบข้อมูลวัว\')">ลบ</a></td>';
+    echo '<td>'.$row_data['employee_id'].'</td>';
+    echo '<td>'.$row_data['employee_name'].'</td>';
+    echo '<td>'.$row_data['employee_address'].'</td>';
+    echo '<td>'.$row_data['employee_phone'].'</td>';
+    echo '<td><a href="updateemployee.php?employee_id='.$row_data['employee_id'].'">แก้ไข</a></td>';
+    echo '<td><a href="employeedelete.php?employee_id='.$row_data['employee_id'].'" onclick="return confirm(\'ยืนยันการลบข้อมูลวัว\')">ลบ</a></td>';
     echo '</tr>';
     $row++;
 }
