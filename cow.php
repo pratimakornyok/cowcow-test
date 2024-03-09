@@ -31,7 +31,8 @@ echo '<th width="50">ลำดับ</th>';
 echo '<th width="100">เลขล็อต</th>';
 echo '<th width="100">ปริมาณนม</th>';
 echo '<th width="100">เกรด</th>';
-echo '<th width="100">ราคา</th>';
+echo '<th width="100">ราคาสมาชิก</th>';
+echo '<th width="100">ราคาทั่วไป</th>';
 echo '<th width="80">แก้ไข</th>';
 echo '<th width="80">ลบ</th>';
 echo '</tr>';
@@ -44,6 +45,7 @@ while ($row_data = mysqli_fetch_assoc($result)) {
     echo '<td>'.$row_data['AmountOfMilk'].'</td>';
     echo '<td>'.$row_data['Quality'].'</td>';
     echo '<td>'.$row_data['Price'].'</td>';
+    echo '<td>'.$row_data['Price_mem'].'</td>';
     echo '<td><a href="updatecow.php?lot_num='.$row_data['lot_num'].'">แก้ไข</a></td>';
     echo '<td><a href="cowdelete.php?lot_num='.$row_data['lot_num'].'" onclick="return confirm(\'ยืนยันการลบข้อมูลวัว\')">ลบ</a></td>';
     echo '</tr>';
