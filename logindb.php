@@ -17,23 +17,19 @@ if(isset($_POST['login'])) {
     }
 
     if(count($errors) == 0) {
-        $password = md5($password);
-        $query = "SELECT * FORM employee WHERE employee_name = '$username' OR employee_pass = '$password'";
+        //$password = md5($password);
+        $query = "SELECT * FROM employee WHERE employee_name = '$username' OR employee_pass = '$password'";
         $result = mysqli_query($conn, $query);
 
         if(mysqli_num_rows($result) == 1) {
             $user = mysqli_fetch_assoc($result);
-            
+
             if(password_verify($password, $user['password'])) {
                 $_SESSION['username'] = $username;
                 $_SESSION['password'] = $password;
                 $_SESSION['success'] = "You are now loged in";
+                    header('location: home.php');
 
-                if($employee['role'] == 'Admin'){
-                    header('location: home.php');
-                }else {
-                    header('location: home.php');
-                }
             }else{
                 array_push($errors, "Wrong username/password combination");
                 $_SESSION['error'] = "Wrong username/password. Please try again.";
