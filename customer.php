@@ -1,6 +1,62 @@
 <html>
 <head>
     <title>cow</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h3 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .btn {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 4px;
+            text-decoration: none;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
 <?php
@@ -29,9 +85,9 @@ echo '<table width="500" border="1">';
 echo '<tr>';
 echo '<th width="50">ลำดับ</th>';
 echo '<th width="100">รหัสลูกค้า</th>';
-echo '<th width="100">ชื่อลูกค้า</th>';
-echo '<th width="100">ที่อยู่</th>';
-echo '<th width="100">เบอร์โทร</th>';
+echo '<th width="200">ชื่อลูกค้า</th>';
+echo '<th width="300">ที่อยู่</th>';
+echo '<th width="200">เบอร์โทร</th>';
 echo '<th width="80">ประเภท</th>';
 echo '</tr>';
 
@@ -52,7 +108,7 @@ while ($row_data = mysqli_fetch_assoc($result)) {
 
 echo '</table>';
 mysqli_close($conn);
-echo '<br><br><a href="menu1.php">Back to menu</a>';
+echo '<br><br><a href="home.php">Back to home</a>';
 echo '</center>';
 
 ?>
