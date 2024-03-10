@@ -14,11 +14,19 @@
   	<?php include('errors.php'); ?>
   	<div class="input-group">
   	  <label>Username</label>
-  	  <input type="text" name="username" value="<?php echo $username; ?>">
+  	  <input type="text" name="employee_name" value="<?php echo $employee_name; ?>">
   	</div>
   	<div class="input-group">
   	  <label>Email</label>
-  	  <input type="email" name="email" value="<?php echo $email; ?>">
+  	  <input type="email" name="employee_name" value="<?php echo $employee_name; ?>">
+  	</div>
+	  <div class="input-group">
+  	  <label>Address</label>
+  	  <input type="text" name="employee_address" value="<?php echo $employee_address; ?>">
+  	</div>
+	  <div class="input-group">
+  	  <label>Phone</label>
+  	  <input type="text" name="employee_phone" value="<?php echo $employee_phone; ?>">
   	</div>
   	<div class="input-group">
   	  <label>Password</label>
