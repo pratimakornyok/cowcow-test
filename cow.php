@@ -3,7 +3,7 @@
     <title>cow</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: Arial;
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
