@@ -19,10 +19,10 @@
 
     mysqli_set_charset($conn, "utf8mb4");
 
-    if(isset($_GET['lot_num'])) {
-        $lot_num = $_GET['lot_num'];
+    if(isset($_GET['bill_id'])) {
+        $bill_id = $_GET['bill_id'];
 
-        $sql = "SELECT * FROM cow WHERE lot_num='$lot_num'";
+        $sql = "SELECT * FROM bill WHERE bill_id='$bill_id'";
         $result = mysqli_query($conn, $sql);
 
         if (!$result) {
@@ -33,20 +33,18 @@
             $row_data = mysqli_fetch_assoc($result);
     ?>
             <center>
-                <h3>แก้ไขข้อมูลวัว</h3>
-                <form action="cowupdate.php" method="post">
-                    <input type="hidden" name="lot_num" value="<?php echo $row_data['lot_num']; ?>">
-                    <label for="AmountOfMilk">ปริมาณนม:</label>
-                    <input type="text" name="AmountOfMilk" value="<?php echo $row_data['AmountOfMilk']; ?>"><br><br>
-                    <label for="Quality">เกรด:</label>
-                    <input type="text" name="Quality" value="<?php echo $row_data['Quality']; ?>"><br><br>
-                    <label for="Price">ราคาสมาชิก:</label>
-                    <input type="text" name="Price_mem" value="<?php echo $row_data['Price']; ?>"><br><br>
-                    <label for="Price">ราคาทั่วไป:</label>
-                    <input type="text" name="Price" value="<?php echo $row_data['Price']; ?>"><br><br>
+                <h3>แก้ไขbill</h3>
+                <form action="billupdate.php" method="post">
+                    <input type="hidden" name="bill_id" value="<?php echo $row_data['bill_id']; ?>">
+                    <label for="customer_id">รหัสลูกค้า:</label>
+                    <input type="text" name="customer_id" value="<?php echo $row_data['customer_id']; ?>"><br><br>
+                    <label for="employee_id">รหัสพนักงานขาย:</label>
+                    <input type="text" name="employee_id" value="<?php echo $row_data['employee_id']; ?>"><br><br>
+                    <label for="lot_num">เลขล็อต:</label>
+                    <input type="text" name="lot_num" value="<?php echo $row_data['lot_num']; ?>"><br><br>
                     <input type="submit" name="submit" value="บันทึกข้อมูล"style="cursor:hand;">
                 </form>
-                <br><br><a href="cow.php">กลับ</a>
+                <br><br><a href="bill.php">กลับ</a>
             </center>
     <?php
         } else {
