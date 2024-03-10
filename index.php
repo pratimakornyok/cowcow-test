@@ -18,7 +18,9 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<center><P>Home Page</p></center>
+	<div class="header">
+	<h2>Home Page</h2>
+	</div>
 	<!-- <br><br><br><br><br><br>
     <center><P>Home Page</p></center>
 	<br><br>
@@ -57,7 +59,7 @@
     <!-- logged in user information -->
     <?php  if (isset($_SESSION['employee_name'])) : ?>
     	<p>Welcome <strong></*?php echo $_SESSION['username']; ?*/></strong></p>
-    	<center><p> <a href="index.php?logout='1'" style="color: red;">logout</a> </p></center>
+    	<center><p> <a href="index.php?logout='1'" style="color: red;">login</a> </p></center>
     <?php endif ?>
 </div>
 
