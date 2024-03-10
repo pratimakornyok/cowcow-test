@@ -18,23 +18,23 @@
   	</div>
   	<div class="input-group">
   	  <label>Email</label>
-  	  <input type="email" name="employee_name" value="<?php echo $employee_name; ?>">
+  	  <input type="email" name="employee_email" value="<?php echo $employee_email; ?>">
   	</div>
 	  <div class="input-group">
   	  <label>Address</label>
-  	  <input type="text" name="employee_address" value="<?php echo $employee_address; ?>">
+  	  <input type="text" name="employee_address">
   	</div>
 	  <div class="input-group">
   	  <label>Phone</label>
-  	  <input type="text" name="employee_phone" value="<?php echo $employee_phone; ?>">
+  	  <input type="text" name="employee_phone">
   	</div>
   	<div class="input-group">
   	  <label>Password</label>
-  	  <input type="password" name="password_1">
+  	  <input type="password" name="employee_pass_1">
   	</div>
   	<div class="input-group">
   	  <label>Confirm password</label>
-  	  <input type="password" name="password_2">
+  	  <input type="password" name="employee_pass_2">
   	</div>
   	<div class="input-group">
   	  <button type="submit" class="btn" name="reg_user">Register</button>

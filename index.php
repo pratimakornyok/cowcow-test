@@ -15,10 +15,11 @@
 <html>
 <head>
 	<title>Home</title>
-	<link rel="stylesheet" type="text/css" href="index.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<br><br><br><br><br><br>
+	<center><P>Home Page</p></center>
+	<!-- <br><br><br><br><br><br>
     <center><P>Home Page</p></center>
 	<br><br>
 	<div class="container">
@@ -37,7 +38,7 @@
 	<div class="box">
 		<h2><a href="bill.php">BILL</a></h2>
 		<p>View and manage billing information.</p>
-	</div>
+	</div> -->
 	</div>
 	
 <div class="content">
@@ -55,7 +56,7 @@
 
     <!-- logged in user information -->
     <?php  if (isset($_SESSION['employee_name'])) : ?>
-    	<!-- <p>Welcome <strong></*?php echo $_SESSION['username']; ?*/></strong></p> -->
+    	<p>Welcome <strong></*?php echo $_SESSION['username']; ?*/></strong></p>
     	<center><p> <a href="index.php?logout='1'" style="color: red;">logout</a> </p></center>
     <?php endif ?>
 </div>
