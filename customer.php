@@ -2,11 +2,15 @@
 <head>
     <title>cow</title>
     <style>
+         @import url('https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+        
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
+            font-family: "Mali", cursive;
+            font-weight: 700;
+            font-style: normal;
         }
         .container {
             max-width: 800px;
