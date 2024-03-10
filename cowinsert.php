@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+
 <?php
     $lot_num = $_POST['lot_num'];
     $AmountOfMilk = $_POST['AmountOfMilk'];
@@ -29,7 +30,7 @@
     $sql = "insert into cow(lot_num, AmountOfMilk, Quality, Price, Price_mem) values ('$lot_num', '$AmountOfMilk', '$Quality', '$Price', '$Price_mem')";
     mysqli_query($conn, $sql) or die("insert ลงตาราง cow มีข้อผิดพลาดเกิดขึ้น");
     header("location: cow.php");
-    echo '<br><br><a href="insertcow.php">กลับหน้า bookList1.php</a>';
+    echo '<br><br><a href="insertcow.php">กลับหน้า home.php</a>';
     mysqli_close($conn);
     echo '</center>';
 ?>

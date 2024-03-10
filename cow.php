@@ -1,12 +1,19 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cow</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+        
         body {
-            font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
+            font-family: "Mali", cursive;
+            font-weight: 700;
+            font-style: normal;
         }
         .container {
             max-width: 800px;
@@ -18,7 +25,7 @@
         }
         h1 {
             text-align: center;
-            color: #333;
+            color: #d85f1b; /* Updated color */
         }
         table {
             width: 100%;
@@ -38,7 +45,7 @@
         }
         a {
             text-decoration: none;
-            color: #007bff;
+            color: #d85f1b; /* Updated color */
         }
         a:hover {
             text-decoration: underline;
@@ -46,7 +53,7 @@
         .btn {
             display: inline-block;
             padding: 8px 16px;
-            background-color: #007bff;
+            background-color: #d85f1b; /* Updated color */
             color: #fff;
             border: none;
             border-radius: 4px;
@@ -54,7 +61,7 @@
             transition: background-color 0.3s;
         }
         .btn:hover {
-            background-color: #0056b3;
+            background-color: #a73e06; /* Darker shade for hover */
         }
     </style>
 </head>
@@ -78,24 +85,24 @@ if (!$result) {
     die("เกิดข้อผิดพลาดในการดึงข้อมูล: " . mysqli_error($conn));
 }
 
-echo '<center>';
-echo '<br><h3>รายการวัว</h3>';
-echo '<a href="insertcow.php">เพิ่มรายการวัว</a>';
-echo '<table width="500" border="1">';
+echo '<div class="container">';
+echo '<h1>รายการวัว</h1>';
+echo '<a class="btn" href="insertcow.php">เพิ่มรายการวัว</a>';
+echo '<table>';
 echo '<tr>';
-echo '<th width="50">ลำดับ</th>';
-echo '<th width="100">เลขล็อต</th>';
-echo '<th width="100">ปริมาณนม</th>';
-echo '<th width="100">เกรด</th>';
-echo '<th width="100">ราคาสมาชิก</th>';
-echo '<th width="100">ราคาทั่วไป</th>';
-echo '<th width="80">แก้ไข</th>';
-echo '<th width="80">ลบ</th>';
+echo '<th>ลำดับ</th>';
+echo '<th>เลขล็อต</th>';
+echo '<th>ปริมาณนม</th>';
+echo '<th>เกรด</th>';
+echo '<th>ราคาสมาชิก</th>';
+echo '<th>ราคาทั่วไป</th>';
+echo '<th>แก้ไข</th>';
+echo '<th>ลบ</th>';
 echo '</tr>';
 
 $row = 1;
 while ($row_data = mysqli_fetch_assoc($result)) {
-    echo '<tr align="center">';
+    echo '<tr>';
     echo '<td>'.$row.'</td>';
     echo '<td>'.$row_data['lot_num'].'</td>';
     echo '<td>'.$row_data['AmountOfMilk'].'</td>';
@@ -110,8 +117,8 @@ while ($row_data = mysqli_fetch_assoc($result)) {
 
 echo '</table>';
 mysqli_close($conn);
-echo '<br><br><a href="home.php">Back to home</a>';
-echo '</center>';
+echo '<br><a href="home.php">Back to home</a>';
+echo '</div>';
 
 ?>
 </body>

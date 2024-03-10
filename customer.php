@@ -1,12 +1,17 @@
+<!DOCTYPE html>
 <html>
 <head>
     <title>cow</title>
     <style>
+         @import url('https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+        
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
+            font-family: "Mali", cursive;
+            font-weight: 700;
+            font-style: normal;
         }
         .container {
             max-width: 800px;
@@ -19,6 +24,7 @@
         h3 {
             text-align: center;
             margin-bottom: 20px;
+            color: #d85f1b; /* Updated color */
         }
         table {
             width: 100%;
@@ -40,7 +46,7 @@
         }
         a {
             text-decoration: none;
-            color: #007bff;
+            color: #d85f1b; /* Updated color */
         }
         a:hover {
             text-decoration: underline;
@@ -48,13 +54,13 @@
         .btn {
             display: inline-block;
             padding: 8px 16px;
-            background-color: #007bff;
+            background-color: #d85f1b; /* Updated color */
             color: #fff;
             border-radius: 4px;
             text-decoration: none;
         }
         .btn:hover {
-            background-color: #0056b3;
+            background-color: #a73e06; /* Darker shade for hover */
         }
     </style>
 </head>
@@ -80,7 +86,7 @@ if (!$result) {
 
 echo '<center>';
 echo '<br><h3>ลูกค้า</h3>';
-echo '<a href="insertcustomer.php">เพิ่มลูกค้า</a>';
+echo '<a class="btn" href="insertcustomer.php">เพิ่มลูกค้า</a>';
 echo '<table width="500" border="1">';
 echo '<tr>';
 echo '<th width="50">ลำดับ</th>';
