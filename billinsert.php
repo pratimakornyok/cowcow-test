@@ -6,13 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-
 <?php
+    $bill_id = $_POST['bill_id'];
+    $customer_id = $_POST['customer_id'];
+    $employee_id = $_POST['employee_id'];
     $lot_num = $_POST['lot_num'];
-    $AmountOfMilk = $_POST['AmountOfMilk'];
-    $Quality = $_POST['Quality'];
-    $Price = $_POST['Price'];
-    $Price_mem = $_POST['Price_mem'];
 
     $hostname = "localhost";
     $username = "root";
@@ -27,10 +25,10 @@
     mysqli_query($conn,"set character_set_client=utf8mb4");
     mysqli_query($conn,"set character_set_results=utf8mb4");
   
-    $sql = "insert into cow(lot_num, AmountOfMilk, Quality, Price, Price_mem) values ('$lot_num', '$AmountOfMilk', '$Quality', '$Price', '$Price_mem')";
+    $sql = "insert into bill(bill_id, customer_id, employee_id,  lot_num) values ('$bill_id', '$customer_id', '$employee_id', '$lot_num')";
     mysqli_query($conn, $sql) or die("insert ลงตาราง cow มีข้อผิดพลาดเกิดขึ้น");
-    header("location: cow.php");
-    echo '<br><br><a href="insertcow.php">กลับหน้า home.php</a>';
+    header("location: bill.php");
+    echo '<br><br><a href="insertcow.php">กลับหน้า bookList1.php</a>';
     mysqli_close($conn);
     echo '</center>';
 ?>
