@@ -28,7 +28,7 @@
         h1 {
             text-align: center;
             margin-bottom: 30px;
-            color: #333333;
+            color: #d85f1b; /* Changed color to #d85f1b */
         }
 
         ul {

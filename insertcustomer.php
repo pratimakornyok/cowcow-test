@@ -1,4 +1,8 @@
-<style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>cow</title>
+    <style>
         @import url('https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
         
         body {
@@ -20,6 +24,7 @@
         h3 {
             text-align: center;
             margin-bottom: 20px;
+            color: #d85f1b; /* Updated color */
         }
         table {
             width: 100%;
@@ -41,7 +46,7 @@
         }
         a {
             text-decoration: none;
-            color: #007bff;
+            color: #d85f1b; /* Updated color */
         }
         a:hover {
             text-decoration: underline;
@@ -49,15 +54,18 @@
         .btn {
             display: inline-block;
             padding: 8px 16px;
-            background-color: #007bff;
+            background-color: #d85f1b; /* Updated color */
             color: #fff;
             border-radius: 4px;
             text-decoration: none;
         }
         .btn:hover {
-            background-color: #0056b3;
+            background-color: #a73e06; /* Darker shade for hover */
         }
     </style>
+</head>
+<body>
+        
 <?php
 $hostname = "localhost";
 $username = "root";
@@ -107,7 +115,9 @@ function getTypeSelect($conn)
                 </td>
             </tr>
         </table>
-        <center><br><input type="submit" name="submit" value="บันทึกข้อมูล"style="cursor:hand;">
-        <input type="reset" name="reset" value="ยกเลิก" style="cursor:hand;"></center>
+        <center><br><input type="submit" name="submit" value="บันทึกข้อมูล" style="background-color: #d85f1b; color: #fff; border-radius: 4px; cursor: pointer;"> <!-- Updated color and styles -->
+        <input type="reset" name="reset" value="ยกเลิก" style="background-color: #d85f1b; color: #fff; border-radius: 4px; cursor: pointer;"></center> <!-- Updated color and styles -->
     </form>
-    <center><br><br><a href="customer.php">กลับหน้าลูกค้า</a></center>
+    <center><br><br><a href="customer.php" style="color: #d85f1b;">กลับหน้าลูกค้า</a></center> <!-- Updated color -->
+</body>
+</html>

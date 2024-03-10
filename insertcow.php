@@ -50,7 +50,7 @@
         }
         input[type="submit"],
         input[type="reset"] {
-            background-color: #007bff;
+            background-color: #d85f1b; /* Updated color */
             color: #fff;
             border: none;
             border-radius: 4px;
@@ -60,11 +60,11 @@
         }
         input[type="submit"]:hover,
         input[type="reset"]:hover {
-            background-color: #0056b3;
+            background-color: #a73e06; /* Darker shade for hover */
         }
         a {
             text-decoration: none;
-            color: #007bff;
+            color: #d85f1b; /* Updated color */
         }
         a:hover {
             text-decoration: underline;
@@ -125,8 +125,8 @@
                 <td width="400"><input type="text" name="Price" size="10" maxlength="5"></td>
             </tr>
         </table>
-        <center><br><input type="submit" name="submit" value="บันทึกข้อมูล"style="cursor:hand;">
-        <input type="reset" name="reset" value="ยกเลิก" style="cursor:hand;">
+        <center><br><input type="submit" name="submit" value="บันทึกข้อมูล" style="cursor:pointer;"> <!-- Removed inline styles -->
+        <input type="reset" name="reset" value="ยกเลิก" style="cursor:pointer;"> <!-- Removed inline styles -->
     </form>
     <br><br><a href="home.php">home</a>
 </body>

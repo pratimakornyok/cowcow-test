@@ -47,7 +47,7 @@
         }
         a {
             text-decoration: none;
-            color: #007bff;
+            color: #d85f1b; /* Updated color */
         }
         a:hover {
             text-decoration: underline;
@@ -55,13 +55,13 @@
         .btn {
             display: inline-block;
             padding: 8px 16px;
-            background-color: #007bff;
+            background-color: #d85f1b; /* Updated color */
             color: #fff;
             border-radius: 4px;
             text-decoration: none;
         }
         .btn:hover {
-            background-color: #0056b3;
+            background-color: #a73e06; /* Darker shade for hover */
         }
     </style>
 </head>
@@ -78,40 +78,39 @@
     mysqli_query($conn, "set character_set_connection=utf8mb4");
     mysqli_query($conn, "set character_set_client=utf8mb4");
     mysqli_query($conn, "set character_set_results=utf8mb4");
-    ?>
+?>
     <html>
     <head><title>insertcow.php</title></head>
     <body>
         <center>
-        <form enctype="multipart/form-data" name="save" method="post"
-
-        action="employeeinsert.php">
-
-        <br><br><table width="700" border="1" bgcolor="#ffffff">
-        <tr>
-            <th colspan="2" bgcolor="" height="21">เพิ่มรายการ</th>
-        </tr>
-        <tr>
-            <td width="200">รหัสพนักงาน : </td>
-            <td width="400"><input type="text" name="employee_id" size="10" maxlength="5"></td>
-        </tr>
-        <tr>
-            <td width="200">ชื่อ : </td>
-            <td width="400"><input type="text" name="employee_name" size="10" maxlength="5"></td>
-        </tr>
-        <tr>
-            <td width="200">ที่อยู่ : </td>
-            <td width="400"><input type="text" name="employee_address" size="10" maxlength="5"></td>
-        </tr>
-        <tr>
-            <td width="200">เบอร์โทร : </td>
-            <td width="400"><input type="text" name="employee_phone" size="10" maxlength="5"></td>
-        </tr>
-        </table>
-            <br><input type="submit" name="submit" value="บันทึกข้อมูล"style="cursor:hand;">
-            <input type="reset" name="reset" value="ยกเลิก" style="cursor:hand;">
-        </form>
+            <form enctype="multipart/form-data" name="save" method="post" action="employeeinsert.php">
+                <br><br><table width="700" border="1" bgcolor="#ffffff">
+                <tr>
+                    <th colspan="2" bgcolor="" height="21">เพิ่มรายการ</th>
+                </tr>
+                <tr>
+                    <td width="200">รหัสพนักงาน : </td>
+                    <td width="400"><input type="text" name="employee_id" size="10" maxlength="5"></td>
+                </tr>
+                <tr>
+                    <td width="200">ชื่อ : </td>
+                    <td width="400"><input type="text" name="employee_name" size="10" maxlength="5"></td>
+                </tr>
+                <tr>
+                    <td width="200">ที่อยู่ : </td>
+                    <td width="400"><input type="text" name="employee_address" size="10" maxlength="5"></td>
+                </tr>
+                <tr>
+                    <td width="200">เบอร์โทร : </td>
+                    <td width="400"><input type="text" name="employee_phone" size="10" maxlength="5"></td>
+                </tr>
+                </table>
+                <br><input type="submit" name="submit" value="บันทึกข้อมูล" style="cursor:pointer;">
+                <input type="reset" name="reset" value="ยกเลิก" style="cursor:pointer;">
+            </form>
             <br><br><a href="employee.php">กลับหน้าพนักงาน</a>
         </center>
+    </body>
+    </html>
 </body>
 </html>
