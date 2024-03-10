@@ -102,11 +102,11 @@
             </tr>
             <tr>
                 <td width="200">รหัสล็อต : </td>
-                <td width="400"><input type="text" name="lot_num" size="10" maxlength="5"></td>
+                <td width="400"><input type="text" name="lot_num" size="10" maxlength="10"></td>
             </tr>
             <tr>
                 <td width="200">ปริมาณน้ำนม : </td>
-                <td width="400"><input type="text" name="AmountOfMilk" size="10" maxlength="5"></td>
+                <td width="400"><input type="text" name="AmountOfMilk" size="10" maxlength="10"></td>
             </tr>
             <tr>
                 <td width="200">เกรด : </td>
@@ -118,11 +118,11 @@
             </tr>
             <tr>
                 <td width="200">ราคาสมาชิก : </td>
-                <td width="400"><input type="text" name="Price_mem" size="10" maxlength="5"></td>
+                <td width="400"><input type="text" name="Price_mem" size="10" maxlength="10"></td>
             </tr>
             <tr>
                 <td width="200">ราคาทั่วไป : </td>
-                <td width="400"><input type="text" name="Price" size="10" maxlength="5"></td>
+                <td width="400"><input type="text" name="Price" size="10" maxlength="10"></td>
             </tr>
         </table>
         <center><br><input type="submit" name="submit" value="บันทึกข้อมูล" style="cursor:pointer;"> <!-- Removed inline styles -->

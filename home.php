@@ -13,7 +13,9 @@
             font-family: "Mali", cursive;
             font-weight: 700;
             font-style: normal;
-            background: linear-gradient(to bottom, #fdfbfb, #ebedee);
+            
+            background-color: #ffffff;
+    
         }
 
         .container {
@@ -53,7 +55,7 @@
         }
 
         a:hover {
-            background: linear-gradient(to bottom, #4a90e2, #2967a8);
+            background: linear-gradient(to bottom,  #f0800f, #ff700f);
             transform: translateY(-3px);
             box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
         }

@@ -77,19 +77,19 @@
             </tr>
             <tr>
                 <td>รหัสรายการขาย:</td>
-                <td><input type="text" name="bill_id" size="10" maxlength="5"></td>
+                <td><input type="text" name="bill_id" size="10" maxlength="10"></td>
             </tr>
             <tr>
                 <td>รหัสลูกค้า:</td>
-                <td><input type="text" name="customer_id" size="10" maxlength="5"></td>
+                <td><input type="text" name="customer_id" size="10" maxlength="10"></td>
             </tr>
             <tr>
                 <td>รหัสพนักงานขาย:</td>
-                <td><input type="text" name="employee_id" size="10" maxlength="5"></td>
+                <td><input type="text" name="employee_id" size="10" maxlength="10"></td>
             </tr>
             <tr>
                 <td>รหัสล็อต:</td>
-                <td><input type="text" name="lot_num" size="10" maxlength="5"></td>
+                <td><input type="text" name="lot_num" size="10" maxlength="10"></td>
             </tr>
         </table>
         <br>

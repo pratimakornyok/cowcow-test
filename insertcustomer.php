@@ -92,19 +92,19 @@ function getTypeSelect($conn)
             </tr>
             <tr>
                 <td width="200">รหัสลูกค้า : </td>
-                <td width="400"><input type="text" name="customer_id" size="10" maxlength="5"></td>
+                <td width="400"><input type="text" name="customer_id" size="50" maxlength="10"></td>
             </tr>
             <tr>
                 <td width="200">ชื่อ : </td>
-                <td width="400"><input type="text" name="customer_name" size="10" maxlength="5"></td>
+                <td width="400"><input type="text" name="customer_name" size="50" maxlength="20"></td>
             </tr>
             <tr>
                 <td width="200">ที่อยู่ : </td>
-                <td width="400"><input type="text" name="customer_address" size="10" maxlength="5"></td>
+                <td width="400"><input type="text" name="customer_address" size="50" maxlength="50"></td>
             </tr>
             <tr>
                 <td width="200">เบอร์โทร : </td>
-                <td width="400"><input type="text" name="customer_phone" size="10" maxlength="5"></td>
+                <td width="400"><input type="text" name="customer_phone" size="50" maxlength="10"></td>
             </tr>
             <tr>
                 <td width="200">ประเภทลูกค้า : </td>

@@ -90,19 +90,19 @@
                 </tr>
                 <tr>
                     <td width="200">รหัสพนักงาน : </td>
-                    <td width="400"><input type="text" name="employee_id" size="10" maxlength="5"></td>
+                    <td width="400"><input type="text" name="employee_id" size="50" maxlength="10"></td>
                 </tr>
                 <tr>
                     <td width="200">ชื่อ : </td>
-                    <td width="400"><input type="text" name="employee_name" size="10" maxlength="5"></td>
+                    <td width="400"><input type="text" name="employee_name" size="50" maxlength="20"></td>
                 </tr>
                 <tr>
                     <td width="200">ที่อยู่ : </td>
-                    <td width="400"><input type="text" name="employee_address" size="10" maxlength="5"></td>
+                    <td width="400"><input type="text" name="employee_address" size="50" maxlength="50"></td>
                 </tr>
                 <tr>
                     <td width="200">เบอร์โทร : </td>
-                    <td width="400"><input type="text" name="employee_phone" size="10" maxlength="5"></td>
+                    <td width="400"><input type="text" name="employee_phone" size="50" maxlength="10"></td>
                 </tr>
                 </table>
                 <br><input type="submit" name="submit" value="บันทึกข้อมูล" style="cursor:pointer;">
