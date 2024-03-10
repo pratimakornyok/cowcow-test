@@ -5,49 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
     <style>
-         @import url('https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Mali:wght@700&display=swap');
+
         body {
             margin: 0;
             padding: 0;
             font-family: "Mali", cursive;
             font-weight: 700;
             font-style: normal;
-            background-color: #d0c1ab;
+            background: linear-gradient(to bottom, #fdfbfb, #ebedee);
         }
+
         .container {
             max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
+            margin: 50px auto;
+            padding: 30px;
+            background: linear-gradient(to bottom right, #ffffff, #f0f0f0);
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
+
         h1 {
             text-align: center;
             margin-bottom: 30px;
+            color: #333333;
         }
+
         ul {
             list-style-type: none;
             padding: 0;
             margin: 0;
         }
+
         li {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
+
         a {
             display: block;
-            padding: 10px 20px;
-            background-color: #d85f1b;
-            color: #fff;
+            padding: 15px 20px;
+            background: linear-gradient(to bottom, #f08080, #ff6969);
+            color: #ffffff;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 10px;
             text-align: center;
+            transition: all 0.3s ease;
         }
+
         a:hover {
-            background-color: #0056b3;
+            background: linear-gradient(to bottom, #4a90e2, #2967a8);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>cowwoc</h1>
+        <h1>🐮 cowwoc 🐄</h1>
         <ul>
             <li><a href="cow.php">cow</a></li>
             <li><a href="customer.php">customer</a></li>
